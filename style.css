@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
 /* SET UP */
 
@@ -11,7 +11,7 @@ ul {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #333;
   background-color: snow;
   margin: 0 auto;
@@ -33,17 +33,31 @@ body {
 /* Task 1 */
 
 .task-1.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1 fr auto;
 }
 
 /* Task 2 */
 
 .task-2.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 12px;
+  place-items: start stretch;
 }
 
 .task-2 .item-1 {
+  /* grid-column-start: 2;
+  grid-column-end: 6; */
+
+  /* This is the same as above 2 Properties*/
+  grid-column: 2 / span 4;
 }
 
 .task-2 .item-2 {
+  grid-column: 6 / span 6;
 }
 
 /* Task 3.1 */
@@ -126,24 +140,106 @@ body {
 /* Task 4 */
 
 .task-4.container {
+  display: grid;
+  gap: 24px;
+
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .task-4 .item-5 {
+  grid-column-end: span 2;
 }
 
 /* Task 5 */
 
 .task-5.container {
+  display: grid;
+  height: 100vh;
+
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 5px;
 }
 
 .task-5 .item-1 {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 3;
 }
 
 .task-5 .item-2 {
+  grid-row: 4 / span 3;
+  grid-column: 1 / span 3;
 }
 
 .task-5 .item-3 {
+  grid-row: 7 / span 3;
+  grid-column: 1 / span 3;
 }
 
 .task-5 .item-4 {
+  grid-row: 10 / span 3;
+  grid-column: 1 / span 3;
+}
+
+.task-5 .item-5 {
+  grid-row: 1 / span 3;
+  grid-column: 4 / span 3;
+}
+
+.task-5 .item-6 {
+  grid-row: 4 / span 3;
+  grid-column: 4 / span 3;
+}
+
+.task-5 .item-7 {
+  grid-row: 7 / span 3;
+  grid-column: 4 / span 3;
+}
+
+.task-5 .item-8 {
+  grid-row: 10 / span 3;
+  grid-column: 4 / span 3;
+}
+.task-5 .item-9 {
+  grid-row: 1 / span 3;
+  grid-column: 7 / span 3;
+}
+
+.task-5 .item-10 {
+  grid-row: 4 / span 3;
+  grid-column: 7 / span 3;
+}
+
+.task-5 .item-11 {
+  grid-row: 7 / span 3;
+  grid-column: 7 / span 3;
+}
+
+.task-5 .item-12 {
+  grid-row: 10 / span 3;
+  grid-column: 7 / span 3;
+}
+.task-5 .item-13 {
+  grid-row: 1 / span 3;
+  grid-column: 10 / span 3;
+}
+
+.task-5 .item-14 {
+  grid-row: 4 / span 3;
+  grid-column: 10 / span 3;
+}
+
+.task-5 .item-15 {
+  grid-row: 7 / span 3;
+  grid-column: 10 / span 3;
+}
+
+.task-5 .item-16 {
+  grid-row: 10 / span 3;
+  grid-column: 10 / span 3;
+}
+
+.black {
+  background: black;
+  color: white;
 }
